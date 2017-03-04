@@ -1,0 +1,17 @@
+<form action="" method="post">
+  {% csrf_token %}
+  {{ form }}
+  <input type="submit" value="Submit" />
+</form>
+
+<br>
+
+<ul>
+{% for x in hits %}
+<li>
+  <a href="{{ x.url }}">Score: {{ x.score }}</a>
+</li>
+{% endfor %}
+</ul>
+
+<p>{{ message }}</p>
